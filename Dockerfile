@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y nginx
 # Nginx config
 RUN echo 'server { \
     listen 80; \
-    root /var/www/html; \
+    root /app; \
     index index.php index.html; \
     location / { \
         try_files $uri $uri/ /index.php?$query_string; \
@@ -22,7 +22,7 @@ RUN echo 'server { \
     } \
 }' > /etc/nginx/sites-available/default
 
-COPY . /var/www/html/
+COPY . /app/
 
 # Start script
 RUN echo '#!/bin/bash\nphp-fpm -D\nnginx -g "daemon off;"' > /start.sh
