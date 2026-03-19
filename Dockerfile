@@ -1,15 +1,13 @@
-FROM php:8.2-apache
+FROM php:8.2-fpm
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Disable all MPM modules first
-RUN a2dismod mpm_worker mpm_event mpm_prefork 2>/dev/null || true
-
-# Then enable only prefork
-RUN a2enmod mpm_prefork
+RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
 
 COPY . /app
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 WORKDIR /app
 
-CMD ["apache2-foreground"]
+CMD ["sh", "-c", "php-fpm & nginx -g 'daemon off;'"]
