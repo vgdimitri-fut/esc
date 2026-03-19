@@ -115,7 +115,7 @@ $bestand = mysqli_fetch_object(mysqli_query($conn, "SELECT bedrijf_foto FROM kal
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td> <a href="<?php echo url(). '/esc/forget_password.php'; ?>">Forget your password?</a> </td>
+<td> <a href="forget_password.php">Forget your password?</a> </td>
 </tr>
 <tr>
 <td align='center' colspan='2'> &nbsp; </td>
