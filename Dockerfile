@@ -1,12 +1,33 @@
-FROM php:8.2-apache
+FROM php:8.2-fpm
 
-RUN rm -f /etc/apache2/mods-enabled/mpm_*.load && \
-    rm -f /etc/apache2/mods-enabled/mpm_*.conf && \
-    ln -s /etc/apache2/mods-available/mpm_prefork.load /etc/apache2/mods-enabled/mpm_prefork.load && \
-    ln -s /etc/apache2/mods-available/mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf && \
-    docker-php-ext-install mysqli pdo pdo_mysql && \
-    a2enmod rewrite
+# Install mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Install nginx
+RUN apt-get update && apt-get install -y nginx
+
+# Nginx config
+RUN echo 'server { \
+    listen 80; \
+    root /var/www/html; \
+    index index.php index.html; \
+    location / { \
+        try_files $uri $uri/ /index.php?$query_string; \
+    } \
+    location ~ \.php$ { \
+        fastcgi_pass 127.0.0.1:9000; \
+        fastcgi_index index.php; \
+        include fastcgi_params; \
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; \
+    } \
+}' > /etc/nginx/sites-available/default
 
 COPY . /var/www/html/
 
+# Start script
+RUN echo '#!/bin/bash\nphp-fpm -D\nnginx -g "daemon off;"' > /start.sh
+RUN chmod +x /start.sh
+
 EXPOSE 80
+
+CMD ["/start.sh"]
