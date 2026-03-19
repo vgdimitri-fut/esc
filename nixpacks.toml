@@ -1,6 +1,0 @@
-# nixpacks.toml
-[phases.setup]
-nixPkgs = ["php82", "php82Extensions.mysqli", "php82Extensions.pdo_mysql"]
-
-[start]
-cmd = "apache2-foreground"
