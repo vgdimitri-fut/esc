@@ -1,4 +1,9 @@
 <?php 
+
+phpinfo();
+
+die();
+
 $path = '/var/www/html';
 if (gethostname() == 'zeropoint') {
     $path = '/var/www/html/solarlogs';
