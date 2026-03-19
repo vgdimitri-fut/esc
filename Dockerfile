@@ -16,9 +16,9 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 RUN a2enmod rewrite
 
-COPY . /usr/src/app
+COPY . /app
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
