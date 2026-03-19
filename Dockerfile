@@ -6,9 +6,9 @@ apt-get update; \
 
 apt-get install -y git unzip;
 
-COPY . /usr/src/myapp
+COPY . /app
 
-WORKDIR /usr/src/myapp
+WORKDIR /app
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
