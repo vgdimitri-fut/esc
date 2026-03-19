@@ -1,7 +1,9 @@
 <?php 
 
+/*
 use setasign\Fpdi\Tcpdf\Fpdi;
 use setasign\Fpdi\Tfpdf;
+*/
 
 /*
 Verwijderen van de regel in tabel user_open_cus_id
