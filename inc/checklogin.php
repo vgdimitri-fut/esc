@@ -3,7 +3,6 @@ $path = '/var/www/html';
 if (gethostname() == 'zeropoint') {
     $path = '/var/www/html/solarlogs';
 }
-require_once $path.'/inc/global.php';
 
 /*
 if( isset( $_COOKIE[$session_var] ) && !isset( $_SESSION[ $session_var ] ) )

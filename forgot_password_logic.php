@@ -3,7 +3,6 @@ $path = '/var/www/html';
 if (gethostname() == 'zeropoint') {
     $path = '/var/www/html/solarlogs';
 }
-require_once $path . '/inc/global.php';
 
 $db = new Database('esc_db');
 

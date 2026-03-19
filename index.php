@@ -3,7 +3,6 @@ $path = '/var/www/html';
 if (gethostname() == 'zeropoint') {
     $path = '/var/www/html/solarlogs';
 }
-require_once $path.'/inc/global.php';
 
 session_cache_expire(24*60*14);
 session_set_cookie_params(3600 * 24 * 7);
