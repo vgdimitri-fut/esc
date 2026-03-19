@@ -26,26 +26,4 @@ if( !isset( $_SESSION[ $session_var ] ) )
 	die(); 
 }
 
-/*
-echo "<pre>";
-var_dump( $_SESSION );
-echo "</pre>";
-*/
-
-sl_check_uitdienst();
-
-// nakijken ofdat het wachtwoord moet gewijzigd worden.
-if( isset( $_SESSION[ $session_var ] ) )
-{
-    $q_zoek1 = mysqli_query($conn, "SELECT * FROM monitoring.kal_users_pwd_changed WHERE switch = ". switch_change_pwd() ." AND user_id = " . $_SESSION[ $session_var ]->user_id) or die( mysqli_error($conn) . " " . __LINE__ );
-
-    if( mysqli_num_rows($q_zoek1) == 0 )
-    {
-    	if( ! stristr($_SERVER['PHP_SELF'], "change_pwd.php") )
-    	{
-    		// redirect naar een andere pagina om het wachtwoord te wijzigen
-    	}
-    }
-}
-
 ?>
