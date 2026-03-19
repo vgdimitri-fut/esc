@@ -1,0 +1,294 @@
+@CHARSET "ISO-8859-1";
+/* CSS Document */
+
+.inst_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	border-top: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: lightgreen;
+	margin-right:5px;
+	float:left;
+}
+
+.aanp_inst_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	border-top: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: YellowGreen;
+	margin-right:5px;
+	float:left;
+}
+
+.arei_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-top: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: #D1DAFF;
+	margin-right:5px;
+	float:left;
+}
+
+.offerte_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-top: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: pink;
+	margin-right:5px;
+	float:left;
+}
+
+.order_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-top: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: #DFFFAF;
+	margin-right:5px;
+	float:left;
+}
+
+.opmeting_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-top: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: lightblue;
+	margin-right:5px;
+	float:left;
+}
+
+.elec_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-top: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: salmon;
+	margin-right:5px;
+	float:left;
+}
+
+.inter_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	border-top: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: #819FF7;
+	margin-right:5px;
+	float:left;
+}
+
+.inter_block_cus{
+	display : block;
+	border-left: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	border-top: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: #819FA7;
+    color:white !important;
+	margin-right:5px;
+	float:left;
+}
+
+.sanitair_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	border-top: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: #FFCC99;
+    color:white !important;
+	margin-right:5px;
+	float:left;
+}
+
+.perma_block{
+	display : block;
+	border-left: 1px solid #404040;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	border-top: 1px solid #404040;
+	width: 200px;
+    height: 130px;
+	padding: 5px;
+	background-color: white;
+    color:#F781D8 !important;
+	margin-right:5px;
+	float:left;
+}
+
+.calendar {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	}
+.calendar caption {
+	margin: 0;
+	padding: .3em 0;
+	background: #FFD054;
+	}
+.calendar th {
+	border-bottom: 1px solid #ccc;
+	font-weight: normal;
+	background: #fff;
+	}
+.calendar td {
+	border: 1px solid #fff;
+	padding: .1em .3em ;
+	width: 1em;
+	text-align: center;
+	}
+.calendar a {
+	color: #000;
+	text-decoration: none;
+	}
+
+.calendar td.today {
+	background: #ffc;
+	}
+.calendar td.selected {
+	border: 1px dotted #ff7800;
+	}
+td.highlighted {
+	background: lightgreen;
+	}
+	
+td.highlighted1 {
+	background: #D1DAFF;
+	}
+	
+td.highlighted2 {
+	background: pink;
+	}
+
+td.highlighted4{
+	background: #DFFFAF;
+}
+
+td.highlighted5{
+	background: lightblue;
+}
+
+td.highlighted6{
+	background: Salmon;
+}
+
+td.highlighted7{
+	background: YellowGreen;
+}
+
+td.highlighted8{
+	background: #819FF7;
+}
+
+td.highlighted9{
+	background: #819FA7;
+}
+
+td.highlighted10{
+	background: #FFCC99;
+}
+
+td.highlighted11{
+	background: #F781D8;
+}
+
+/*  nummer 3 is voor het weergeven van de dubbels, altijd laatst houden  */
+td.highlighted3 {
+	background: silver;
+	}
+	
+.calendar td:hover, .calendar td.today:hover, 
+.calendar td.selected:hover, .calendar td.highlighted:hover {
+	background: #cff;
+	border: 1px solid #09f;
+	}
+
+table.calendar td.pad {
+	color: #999;
+	background: #fff;
+	}
+table.calendar td.pad:hover {
+	background: none;
+	border: 0;
+	}
+	
+#sunday, #saturday {
+	background: #f0f0f0;
+	}	
+
+#year {
+	padding: 0;
+	width: 550px;
+	list-style: none;
+	}
+#year:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+#year li {
+	float: left;
+	padding: 0 .5em .5em 0;
+	height: 150px;
+	}
+
+.maand_overzicht td{
+	padding-left:10px;
+	padding-right: 10px;
+}
+
+.maand_overzicht{
+	color: #404040;
+	background-color: #FFEEC9;
+}
+
+.maand_td{
+	color: #404040;
+	background-color: #FFF2E2;
+}
+	

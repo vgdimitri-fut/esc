@@ -1,0 +1,11 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+}
+
+#pagewrapper{
+    width:  950px;
+    margin:0;
+    padding:0;
+}

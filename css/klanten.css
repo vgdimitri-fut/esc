@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4-nov-2013, 11:03:39
+    Author     : Aytac
+*/
+table.main_table {
+    background-color: #FFFFCC;
+    border-top: 1px solid silver;
+    border-left: 1px solid silver;
+    border-bottom: 2px solid silver;
+    border-right: 2px solid silver;
+}
+
+input:focus {
+    border: 2px solid #3333FF;
+}
+
+select:hover {
+    border: 1px solid #3399FF;
+}
+
+input[type=text]:hover,textarea:hover,checkbox:hover {
+    border: 2px solid #3399FF;
+}
+
+.klant_gegevens{
+    font-weight:800;
+}
+
+.offerte_gegevens{
+    font-weight:800;
+    color: darkblue;
+}
+
+.verkoop_gegevens{
+    font-weight:800;
+    color: darkgreen;
+}
+
+fieldset{
+    width: 440px;
+}
+
+legend{
+    font-weight:800;
+    font-style:italic;
+}
+th{
+    text-align:left;
+}
+[id^=tbl_] label{
+    font-weight:bold;
+}
