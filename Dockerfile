@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.1-fpm
 
 # Install MySQLi extension
 RUN docker-php-ext-install mysqli pdo pdo_mysql
