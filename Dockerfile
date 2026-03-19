@@ -2,10 +2,10 @@ FROM php:8.2-apache
 
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Remove all MPM modules
-RUN rm -f /etc/apache2/mods-enabled/mpm_*.load
+# Disable all MPM modules first
+RUN a2dismod mpm_worker mpm_event mpm_prefork 2>/dev/null || true
 
-# Enable only prefork
+# Then enable only prefork
 RUN a2enmod mpm_prefork
 
 COPY . /app
