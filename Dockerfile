@@ -22,10 +22,14 @@ RUN echo 'server { \
     } \
 }' > /etc/nginx/sites-available/default
 
+# Copy to /app
 COPY . /app/
 
+# Set permissions
+RUN chown -R www-data:www-data /app/
+
 # Start script
-RUN echo '#!/bin/bash\nphp-fpm -D\nnginx -g "daemon off;"' > /start.sh
+RUN printf '#!/bin/bash\nphp-fpm -D\nnginx -g "daemon off;"' > /start.sh
 RUN chmod +x /start.sh
 
 EXPOSE 80
