@@ -28,8 +28,11 @@ COPY . /app/
 # Set permissions
 RUN chown -R www-data:www-data /app/
 
-# Start script
-RUN printf '#!/bin/bash\nphp-fpm -D\nnginx -g "daemon off;"' > /start.sh
+# Better start script - wait for PHP-FPM to be ready
+RUN printf '#!/bin/bash\n\
+php-fpm -D\n\
+sleep 2\n\
+nginx -g "daemon off;"' > /start.sh
 RUN chmod +x /start.sh
 
 EXPOSE 80
