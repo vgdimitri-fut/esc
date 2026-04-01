@@ -13,7 +13,7 @@ $db_pass = 'AVNS_NfHsfTfTYpn972tQsAf';
 $db_name = 'default';
 
 $conn = @mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port);
-
+mysqli_query($conn, "SET SESSION sql_mode = ''");
 $GLOBALS["conn"] = $conn;
 
 ?>
