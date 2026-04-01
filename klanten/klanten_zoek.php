@@ -193,11 +193,13 @@ if (((isset($_POST["submit"]) && $_POST["submit"] == "Go") || $p_cus_id1 > 0 || 
           daarna user_id en cus_id toevoegen
          */
         // BEGIN CONTROLE OM TE ZIEN WIE DE KLANT GEOPEND HEEFT
+        /*
         $q_del = "DELETE FROM monitoring.user_open_cus_id WHERE user_id = " . $_SESSION[ $session_var ]->user_id;
         mysqli_query($conn, $q_del) or die(mysqli_error($conn) . " " . __LINE__);
 
         $q_ins = "INSERT INTO monitoring.user_open_cus_id(user_id, cus_id) VALUES(" . $_SESSION[ $session_var ]->user_id . "," . $_POST["klant_val"] . ")";
         mysqli_query($conn, $q_ins) or die(mysqli_error($conn) . " " . __LINE__ );
+        */
         // EINDE TEST
         // UITLEZEN VAN DE NIEUWE TABEL EN TONEN WIE DAT ER DEZE KLANT GEOPEND HEEFT.
         $q_zoek_klant = mysqli_query($conn, "SELECT * FROM monitoring.user_open_cus_id WHERE cus_id = " . $_POST["klant_val"]);
