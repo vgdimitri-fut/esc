@@ -10,7 +10,7 @@ $db_host = 'mysql-esc-service-ilumen-69b0.h.aivencloud.com';
 $db_port = 18917;
 $db_user = 'avnadmin';
 $db_pass = 'AVNS_NfHsfTfTYpn972tQsAf';
-$db_name = 'defaultdb';
+$db_name = 'esc_db';
 
 $conn = @mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port);
 mysqli_query($conn, "SET SESSION sql_mode = ''");
