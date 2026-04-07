@@ -21,8 +21,21 @@ $db_user = 'admin';
 $db_pass = 'eEohFTfwYwXes3Ar4iSE';
 $db_name = 'esc_db';
 
-$conn = @mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port);
+$conn = @mysqli_init();
+mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
+mysqli_real_connect($conn, $db_host, $db_user, $db_pass, $db_name, $db_port, NULL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
 mysqli_query($conn, "SET SESSION sql_mode = ''");
 $GLOBALS["conn"] = $conn;
 
+/*
+$db_host = 'esc-db.c72o8a2guvdp.eu-central-1.rds.amazonaws.com';
+$db_port = 3306;
+$db_user = 'admin';
+$db_pass = 'eEohFTfwYwXes3Ar4iSE';
+$db_name = 'esc_db';
+
+$conn = @mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port);
+mysqli_query($conn, "SET SESSION sql_mode = ''");
+$GLOBALS["conn"] = $conn;
+*/
 ?>
