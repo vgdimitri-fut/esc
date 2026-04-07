@@ -22,8 +22,8 @@ $db_pass = 'eEohFTfwYwXes3Ar4iSE';
 $db_name = 'esc_db';
 
 $conn = @mysqli_init();
-mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
-mysqli_real_connect($conn, $db_host, $db_user, $db_pass, $db_name, $db_port, NULL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
+mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, 'DHE-RSA-AES256-SHA');
+mysqli_real_connect($conn, $db_host, $db_user, $db_pass, $db_name, $db_port, NULL, MYSQLI_CLIENT_SSL);
 mysqli_query($conn, "SET SESSION sql_mode = ''");
 $GLOBALS["conn"] = $conn;
 
